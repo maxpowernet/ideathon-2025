@@ -20,6 +20,32 @@
 
         <!-- Actions -->
         <div class="flex items-center gap-2">
+          <!-- WhatsApp Button -->
+          <button 
+            @click="showWhatsAppModal = true"
+            class="p-2 hover:bg-green-50 rounded-xl transition-colors active:scale-95"
+            title="WhatsApp"
+          >
+            <img 
+              src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" 
+              alt="WhatsApp"
+              class="w-7 h-7"
+            />
+          </button>
+
+          <!-- AI Agent Button -->
+          <button 
+            @click="showAIAgentModal = true"
+            class="p-2 hover:bg-blue-50 rounded-xl transition-colors active:scale-95"
+            title="Agente de IA"
+          >
+            <img 
+              src="https://static.thenounproject.com/png/ai-agents-hub-icon-8003264-512.png" 
+              alt="Agente de IA"
+              class="w-7 h-7"
+            />
+          </button>
+
           <!-- Reseller Panel Button -->
           <button 
             v-if="authStore.isAuthenticated && authStore.userRole === 'buyer'"
@@ -132,6 +158,64 @@
     v-if="showRevendaPanel"
     @close="showRevendaPanel = false"
   />
+
+  <!-- WhatsApp Modal -->
+  <div 
+    v-if="showWhatsAppModal"
+    @click="showWhatsAppModal = false"
+    class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+  >
+    <div 
+      @click.stop
+      class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto"
+    >
+      <!-- Close Button -->
+      <button 
+        @click="showWhatsAppModal = false"
+        class="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Image -->
+      <img 
+        src="/src/assets/publicacao.jpeg" 
+        alt="WhatsApp"
+        class="w-full h-auto object-contain"
+      />
+    </div>
+  </div>
+
+  <!-- AI Agent Modal -->
+  <div 
+    v-if="showAIAgentModal"
+    @click="showAIAgentModal = false"
+    class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+  >
+    <div 
+      @click.stop
+      class="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden"
+    >
+      <!-- Close Button -->
+      <button 
+        @click="showAIAgentModal = false"
+        class="absolute top-4 right-4 z-10 p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Image -->
+      <img 
+        src="/src/assets/agenteIa.jpeg" 
+        alt="Agente de IA"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -144,6 +228,8 @@ const authStore = useAuthStore()
 const cart = useCart()
 const showProfileMenu = ref(false)
 const showRevendaPanel = ref(false)
+const showWhatsAppModal = ref(false)
+const showAIAgentModal = ref(false)
 
 onMounted(() => {
   cart.loadCart()
