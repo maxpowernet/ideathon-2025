@@ -1,0 +1,110 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply m-0 bg-gradient-to-br from-cerrado-sand via-white to-cerrado-sand/30;
+    @apply text-gray-800 font-sans;
+    @apply min-h-screen;
+  }
+
+  #app {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  /* Touch-optimized button */
+  .btn-primary {
+    @apply bg-cerrado-green text-white font-semibold;
+    @apply py-3 px-6 rounded-xl;
+    @apply shadow-card hover:shadow-lg;
+    @apply transition-all duration-200;
+    @apply active:scale-95;
+    @apply min-h-[48px] min-w-[48px]; /* Minimum touch target */
+  }
+
+  .btn-secondary {
+    @apply bg-cerrado-yellow text-cerrado-earth font-semibold;
+    @apply py-3 px-6 rounded-xl;
+    @apply shadow-card hover:shadow-lg;
+    @apply transition-all duration-200;
+    @apply active:scale-95;
+    @apply min-h-[48px] min-w-[48px];
+  }
+
+  .btn-outline {
+    @apply border-2 border-cerrado-green text-cerrado-green font-semibold;
+    @apply py-3 px-6 rounded-xl;
+    @apply hover:bg-cerrado-green hover:text-white;
+    @apply transition-all duration-200;
+    @apply active:scale-95;
+    @apply min-h-[48px] min-w-[48px];
+  }
+
+  /* Card styling */
+  .card {
+    @apply bg-white rounded-2xl shadow-soft;
+    @apply p-4 transition-all duration-300;
+    @apply hover:shadow-card;
+  }
+
+  /* Input fields - mobile optimized */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl;
+    @apply border-2 border-gray-200;
+    @apply focus:border-cerrado-green focus:outline-none;
+    @apply text-base; /* Prevents zoom on iOS */
+    @apply min-h-[48px];
+    @apply transition-colors duration-200;
+  }
+
+  /* Chip/Tag component */
+  .chip {
+    @apply inline-flex items-center px-4 py-2;
+    @apply bg-cerrado-green/10 text-cerrado-green;
+    @apply rounded-full text-sm font-medium;
+    @apply cursor-pointer select-none;
+    @apply transition-all duration-200;
+    @apply active:scale-95;
+    @apply min-h-[36px];
+  }
+
+  .chip.active {
+    @apply bg-cerrado-green text-white;
+  }
+
+  /* Floating Action Button */
+  .fab {
+    @apply fixed bottom-6 right-6 z-50;
+    @apply w-16 h-16 rounded-full;
+    @apply bg-cerrado-yellow text-white;
+    @apply shadow-xl hover:shadow-2xl;
+    @apply flex items-center justify-center;
+    @apply transition-all duration-300;
+    @apply active:scale-90;
+    @apply cursor-pointer;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .gradient-cerrado {
+    @apply bg-gradient-to-br from-cerrado-green via-cerrado-emerald to-cerrado-earth-light;
+  }
+
+  .text-gradient-cerrado {
+    @apply bg-gradient-to-r from-cerrado-green to-cerrado-earth-light;
+    @apply bg-clip-text text-transparent;
+  }
+}
