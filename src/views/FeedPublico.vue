@@ -4,7 +4,7 @@
     <section class="gradient-cerrado text-white py-12 px-4">
       <div class="container mx-auto max-w-4xl text-center space-y-4">
         <h1 class="text-3xl sm:text-4xl font-bold">
-          🌿 Vitrine da Bioeconomia do Cerrado
+          🌿 Cerrado Certo Conectado
         </h1>
         <p class="text-lg sm:text-xl opacity-90">
           Conectando produtores do Sul do Tocantins aos compradores conscientes

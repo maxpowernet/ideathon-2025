@@ -11,9 +11,9 @@ import OrderHistory from '@/views/OrderHistory.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'feed',
     component: FeedPublico,
-    meta: { requiresAuth: false, title: 'Vitrine da Bioeconomia' }
+    meta: { requiresAuth: false, title: 'Cerrado Certo Conectado' }
   },
   {
     path: '/produtor',

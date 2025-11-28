@@ -119,7 +119,7 @@ const shareOrder = async (order) => {
 💰 Total: R$ ${formatPrice(order.totalPrice)}
 🌿 Produtores: ${order.producers.join(', ')}
 
-Vitrine da Bioeconomia do Cerrado`
+Cerrado Certo Conectado`
 
   if (navigator.share) {
     try {

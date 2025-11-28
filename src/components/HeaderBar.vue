@@ -12,7 +12,7 @@
           </div>
           <div class="hidden sm:block">
             <h1 class="text-lg font-bold text-gradient-cerrado leading-tight">
-              Vitrine do Cerrado
+              Cerrado Certo Conectado
             </h1>
             <p class="text-xs text-gray-500">Bioeconomia em Ação</p>
           </div>

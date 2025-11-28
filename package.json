@@ -1,9 +1,9 @@
 {
-  "name": "vitrine-bioeconomia-cerrado",
+  "name": "cerrado-certo-conectado",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "MVP Marketplace Digital - Ideathon FAPTgulhas UniSaberes 2025",
+  "description": "Marketplace Digital - Cerrado Certo Conectado - Ideathon FAPTgulhas UniSaberes 2025",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

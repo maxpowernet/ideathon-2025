@@ -167,7 +167,7 @@ export function useWhatsApp() {
       if (navigator.share && file) {
         // Web Share API Level 2 (suporta arquivos)
         await navigator.share({
-          title: 'Contrato - Vitrine do Cerrado',
+          title: 'Contrato - Cerrado Certo Conectado',
           text: text,
           files: [file]
         })
@@ -175,7 +175,7 @@ export function useWhatsApp() {
       } else if (navigator.share) {
         // Apenas texto
         await navigator.share({
-          title: 'Vitrine do Cerrado',
+          title: 'Cerrado Certo Conectado',
           text: text
         })
         return { success: true }
