@@ -62,11 +62,20 @@
           <div v-else class="relative">
             <button 
               @click="showProfileMenu = !showProfileMenu"
-              class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-xl transition-colors active:scale-95"
+              class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-xl transition-colors active:scale-95"
             >
-              <div class="w-8 h-8 rounded-full bg-cerrado-green flex items-center justify-center text-white font-semibold">
-                {{ authStore.user?.name ? authStore.user.name.charAt(0).toUpperCase() : '' }}
+              <div class="w-9 h-9 rounded-full bg-cerrado-green flex items-center justify-center text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                </svg>
               </div>
+              <div class="hidden sm:block text-left">
+                <p class="text-xs text-gray-500">Logado como</p>
+                <p class="text-sm font-medium text-gray-700">{{ authStore.userRole === 'producer' ? '🌱 Produtor' : '🤖 ADMakers' }}</p>
+              </div>
+              <svg class="w-4 h-4 text-gray-400 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
 
             <!-- Profile Dropdown -->
@@ -75,12 +84,6 @@
                 v-if="showProfileMenu"
                 class="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg py-2 border border-gray-100"
               >
-                <div class="px-4 py-2 border-b border-gray-200">
-                  <p class="text-xs text-gray-500">Logado como</p>
-                  <p class="font-semibold text-gray-800">{{ authStore.user?.name || '' }}</p>
-                  <p class="text-xs text-gray-600">{{ authStore.userRole === 'producer' ? '🌱 Produtor' : '🛍️ Comprador' }}</p>
-                </div>
-
                 <router-link 
                   v-if="authStore.userRole === 'producer'"
                   to="/produtor"

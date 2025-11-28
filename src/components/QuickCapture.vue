@@ -416,6 +416,21 @@ const handlePublish = async () => {
       benefits: ['Benefício 1', 'Benefício 2', 'Benefício 3'],
     }
 
+    // Enviar para o webhook N8N
+    try {
+      await fetch('https://n8n.jaderson.cloud/webhook/f6ddc488-8680-4351-84dd-d9e73b2d102d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newProduct)
+      })
+      console.log('Dados enviados para o webhook com sucesso')
+    } catch (webhookError) {
+      console.error('Erro ao enviar para webhook:', webhookError)
+      // Não bloqueia a publicação se o webhook falhar
+    }
+
     emit('published', newProduct)
     toast.success('🎉 Produto publicado com sucesso!')
     resetForm()
