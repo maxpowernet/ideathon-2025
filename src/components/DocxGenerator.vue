@@ -53,7 +53,7 @@ const generate = async () => {
       spacing: { after: 200 },
     }),
     new Paragraph({
-      text: "Cerrado Certo Conectado",
+      text: "Vitrine do Cerrado",
       alignment: AlignmentType.CENTER,
       spacing: { after: 400 },
     }),
@@ -276,7 +276,7 @@ const generate = async () => {
       spacing: { before: 400, after: 100 },
     }),
     new Paragraph({
-      text: "Documento gerado automaticamente pela plataforma Cerrado Certo Conectado",
+      text: "Documento gerado automaticamente pela plataforma Vitrine do Cerrado",
       alignment: AlignmentType.CENTER,
       italics: true,
       spacing: { after: 100 },
@@ -319,7 +319,7 @@ const generate = async () => {
 }
 
 const getWhatsAppShareMessage = () => {
-  const message = `📄 *Contrato de Compra - Cerrado Certo Conectado*
+  const message = `📄 *Contrato de Compra - Vitrine do Cerrado*
 
 Prezado Produtor,
 
@@ -330,7 +330,7 @@ Segue em anexo o contrato referente à sua venda através da nossa plataforma.
 - Quantidade de itens: ${props.cartItems.length}
 
 Atenciosamente,
-Comprador via Cerrado Certo Conectado`
+Comprador via Vitrine do Cerrado`
   
   return encodeURIComponent(message)
 }
@@ -342,7 +342,7 @@ const shareViaWhatsApp = () => {
 }
 
 const shareViaEmail = () => {
-  const subject = `Contrato de Compra - Cerrado Certo Conectado`
+  const subject = `Contrato de Compra - Vitrine do Cerrado`
   const body = getWhatsAppShareMessage().replace(/\*/g, '').replace(/%20/g, ' ')
   const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body.replace(/\n/g, '%0A'))}`
   window.open(mailtoLink)

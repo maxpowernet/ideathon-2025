@@ -243,7 +243,7 @@ const shareProduct = async () => {
     try {
       await navigator.share({
         title: props.product.name,
-        text: `Confira ${props.product.name} na Cerrado Certo Conectado!`,
+        text: `Confira ${props.product.name} na Vitrine do Cerrado!`,
         url: window.location.href,
       })
     } catch (err) {

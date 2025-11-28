@@ -4,7 +4,7 @@
     <section class="gradient-cerrado text-white py-12 px-4">
       <div class="container mx-auto max-w-4xl text-center space-y-4">
         <h1 class="text-3xl sm:text-4xl font-bold">
-          🌿 Cerrado Certo Conectado
+          🌿 Vitrine do Cerrado
         </h1>
         <p class="text-lg sm:text-xl opacity-90">
           Conectando produtores do Sul do Tocantins aos compradores conscientes
@@ -181,7 +181,7 @@ const mockProducts = [
     price: 120.00,
     unit: 'unidade',
     category: 'handicraft',
-    image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400',
+    image: '/src/assets/Cesta de Capim Dourado.jpeg',
     origin: 'Porto Nacional/TO',
     producerName: 'Ana Costa',
     producerId: 'prod3',
@@ -226,7 +226,7 @@ const mockProducts = [
     price: 22.00,
     unit: 'kg',
     category: 'fruit',
-    image: 'https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=400',
+    image: '/src/assets/Polpa de Buriti.jpeg',
     origin: 'Lagoa da Confusão/TO',
     producerName: 'Carlos Mendes',
     producerId: 'prod5',
@@ -256,7 +256,7 @@ const mockProducts = [
     price: 20.00,
     unit: 'kg',
     category: 'fruit',
-    image: 'https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=400',
+    image: '/src/assets/Buriti.jpeg',
     origin: 'Dueré/TO',
     producerName: 'Francisca Lima',
     producerId: 'prod7',
@@ -271,7 +271,7 @@ const mockProducts = [
     price: 35.00,
     unit: 'kg',
     category: 'fruit',
-    image: 'https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?w=400',
+    image: '/src/assets/Bacupari.jpeg',
     origin: 'Porto Nacional/TO',
     producerName: 'Manoel Rodrigues',
     producerId: 'prod8',
@@ -286,7 +286,7 @@ const mockProducts = [
     price: 18.00,
     unit: 'kg',
     category: 'fruit',
-    image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400',
+    image: '/src/assets/Murici.jpeg',
     origin: 'Alvorada/TO',
     producerName: 'Rita Souza',
     producerId: 'prod9',
@@ -301,7 +301,7 @@ const mockProducts = [
     price: 25.00,
     unit: 'kg',
     category: 'fruit',
-    image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400',
+    image: '/src/assets/Curriola.jpeg',
     origin: 'Formoso do Araguaia/TO',
     producerName: 'Sebastião Martins',
     producerId: 'prod10',

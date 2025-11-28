@@ -13,7 +13,7 @@ const routes = [
     path: '/',
     name: 'feed',
     component: FeedPublico,
-    meta: { requiresAuth: false, title: 'Cerrado Certo Conectado' }
+    meta: { requiresAuth: false, title: 'Vitrine do Cerrado' }
   },
   {
     path: '/produtor',

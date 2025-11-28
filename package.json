@@ -1,9 +1,9 @@
 {
-  "name": "cerrado-certo-conectado",
+  "name": "vitrine-do-cerrado",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Marketplace Digital - Cerrado Certo Conectado - Ideathon FAPTgulhas UniSaberes 2025",
+  "description": "Marketplace Digital - Vitrine do Cerrado - Ideathon FAPTgulhas UniSaberes 2025",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -119,7 +119,7 @@ const shareOrder = async (order) => {
 💰 Total: R$ ${formatPrice(order.totalPrice)}
 🌿 Produtores: ${order.producers.join(', ')}
 
-Cerrado Certo Conectado`
+Vitrine do Cerrado`
 
   if (navigator.share) {
     try {
