@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Environment
+.env
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Data
+data/*.json
+!data/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

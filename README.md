@@ -63,10 +63,25 @@ Plataforma digital que conecta produtores da sociobiodiversidade do Sul do Tocan
 - **Web Speech API** (reconhecimento de voz PT-BR - navegadores Chromium)
 - **Web Share API** (compartilhamento nativo de arquivos)
 
+### Backend (Node.js + Express)
+- **Express** (framework web)
+- **Multer** (upload de arquivos)
+- **CORS** (segurança e integração frontend/backend)
+- **Persistência JSON** (pronto para PostgreSQL/Firebase)
+
+### APIs Implementadas
+- **IA de Visão Computacional** (`POST /api/ia/classificar`)
+- **Precificação Dinâmica** (`POST /api/preco/sugerir`)
+- **CRUD de Anúncios** (`GET/POST/PUT/DELETE /api/anuncios`)
+- **Upload de Imagens** (`POST /api/upload/imagem`)
+- **Distribuição Omnicanal** (formatação para WhatsApp, Instagram, Telegram)
+
 ### Integrações Planejadas (Pós-MVP)
+- **Roboflow** (IA de visão computacional treinada)
 - **WhatsApp Business API** (Twilio) para mensagens e áudios
 - **Google Cloud Speech-to-Text** (transcrição profissional PT-BR)
-- **Firebase** (Auth, Firestore, Storage, Cloud Functions)
+- **Firebase/PostgreSQL** (banco de dados robusto)
+- **Cloudflare R2/AWS S3** (armazenamento de imagens)
 
 ### Paleta de Cores Cerrado
 - Verde Esmeralda: `#10b981`
@@ -84,30 +99,61 @@ Plataforma digital que conecta produtores da sociobiodiversidade do Sul do Tocan
 - Node.js 18+ instalado
 - npm ou yarn
 
-### Passos
+### 🎯 Início Rápido (Recomendado)
 
-1. **Instalar dependências**
+**Execute o script de inicialização automática:**
+
 ```powershell
-npm install
+.\start.ps1
 ```
 
-2. **Iniciar servidor de desenvolvimento**
+Este script irá:
+- Instalar dependências do frontend e backend
+- Iniciar o servidor backend (porta 3001)
+- Iniciar o servidor frontend (porta 5173)
+- Abrir ambos em janelas separadas
+
+### 📝 Instalação Manual
+
+#### 1. Frontend
+
 ```powershell
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
 npm run dev
 ```
 
-3. **Acessar a aplicação**
-   - Abra o navegador em `http://localhost:3000`
-   - Para testar em dispositivo móvel na mesma rede, use o IP local exibido no terminal
+#### 2. Backend
 
-4. **Build para produção**
 ```powershell
-npm run build
+# Ir para pasta do backend
+cd backend
+
+# Instalar dependências
+npm install
+
+# Iniciar API
+npm run dev
 ```
 
-5. **Preview da build**
+### 🌐 Acessar a Aplicação
+
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3001
+- **Health Check**: http://localhost:3001/health
+
+### 🏗️ Build para Produção
+
 ```powershell
+# Frontend
+npm run build
 npm run preview
+
+# Backend
+cd backend
+npm start
 ```
 
 ---
